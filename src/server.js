@@ -12,7 +12,7 @@ const { isDevelopment } = require('./config');
 const server = new Koa();
 
 const Knex = require('knex');
-const knexConfig = require('@ccwisp/chatdb').knexfile;
+const knexConfig = require('chatdb-picsart-hw').knexfile;
 
 const { Model } = require('objection');
 
