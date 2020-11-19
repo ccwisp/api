@@ -1,10 +1,10 @@
 'use strict';
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
 const { SECRET } = require('../../config');
 
-const User = require('@ccwisp/chatdb').User;
+const User = require('chatdb-picsart-hw').User;
 
 exports.register = async ctx => {
   const { login, password, email } = ctx.request.body;

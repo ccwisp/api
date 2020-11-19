@@ -1,6 +1,6 @@
 'use strict';
 
-const User = require('@ccwisp/chatdb').User;
+const User = require('chatdb-picsart-hw').User;
 
 exports.getOne = async ctx => {
   const query = User.query();
