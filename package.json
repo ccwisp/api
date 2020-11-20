@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@koa/cors": "2.2.3",
-    "chatdb-picsart-hw": "^1.9.0",
+    "chatdb-picsart-hw": "^2.0.0",
     "dotenv": "8.0.0",
     "fs-extra": "^9.0.1",
     "joi": "14.3.1",
