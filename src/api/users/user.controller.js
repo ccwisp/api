@@ -2,7 +2,7 @@
 
 const User = require('chatdb-picsart-hw').User;
 
-console.log('TEST FOR AUTOMERGE');
+console.log('TEST FOR AUTOMERGE  ');
 
 exports.getOne = async ctx => {
   const query = User.query();
