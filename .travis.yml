@@ -11,7 +11,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   keep_history: true
-  github_token: $github_token # Your GitHub token set in Travis CI console
+  github_token: ${GITHUB_TOKEN} # Your GitHub token set in Travis CI console
   target_branch: master # Push into GitHub repo master branch
   on:
     branch: dev # Your GitHub repo default branch
