@@ -5,5 +5,5 @@ cache: npm
 before_script: npm update
 branches:
   except:
-    - master
+    - main
 after_success: chmod +x merge.sh && ./merge.sh
