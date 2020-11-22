@@ -3,13 +3,20 @@
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
   "scripts": {
     "check": "npm run format && npm run lint",
     "dev": "nodemon src/index.js",
     "format": "prettier --write \"**/*.+(js|yml|yaml|json)\"",
     "lint": "eslint .",
     "start": "node src/index.js",
-    "knex": "knex"
+    "knex": "knex",
+    "test": "jest"
   },
   "devDependencies": {
     "eslint": "5.16.0",
@@ -20,8 +27,10 @@
     "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-promise": "4.1.1",
     "eslint-plugin-standard": "4.0.0",
+    "jest": "^26.6.3",
     "nodemon": "1.19.0",
-    "prettier": "1.17.1"
+    "prettier": "1.17.1",
+    "supertest": "^6.0.1"
   },
   "dependencies": {
     "@koa/cors": "2.2.3",
