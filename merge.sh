@@ -1,6 +1,3 @@
-if [ "$TRAVIS_BRANCH" != "dev" ]; then 
-    exit 0;
-fi
 
 export GIT_COMMITTER_EMAIL='Travis@travisservice.com'
 export GIT_COMMITTER_NAME='AutoMerge Bot'
