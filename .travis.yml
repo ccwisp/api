@@ -6,7 +6,4 @@ before_script: npm update
 branches:
   except:
     - master
-after_success:
-  - curl
-    https://gist.githubusercontent.com/lxhunter/758e1e3041d7ec7aec3814018d781e29/raw/merge.sh
-    | bash
+after_success: chmod +x merge.sh && ./merge.sh
