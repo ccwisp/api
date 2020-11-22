@@ -9,7 +9,7 @@ printf '\nb2>>>>>>>>>>>>>>'
 
 
 git checkout main || exit
-git merge --no-ff 'origin/dev' || exit
+git merge --no-ff 'dev' || exit
 
 printf '3>>>>>>>>>\n'
 git push "https://${GITHUB_TOKEN}@github.com/ccwisp/api.git"
