@@ -1,7 +1,4 @@
 
-export GIT_COMMITTER_EMAIL='Travis@travisservice.com'
-export GIT_COMMITTER_NAME='AutoMerge Bot'
-
 printf '1>>>>>>>>>>>>>.\n'
 git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* || exit
 git fetch --all || exit
