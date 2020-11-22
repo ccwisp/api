@@ -6,4 +6,8 @@ before_script: npm update
 branches:
   except:
     - main
-after_success: chmod +x merge.sh && ./merge.sh
+after_success: chmod +x merge.sh
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: ./merge.sh
