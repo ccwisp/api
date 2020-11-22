@@ -2,7 +2,7 @@
 
 const User = require('chatdb-picsart-hw').User;
 
-console.log('123123213213');
+console.log('3');
 exports.getOne = async ctx => {
   const query = User.query();
 
