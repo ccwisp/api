@@ -15,8 +15,7 @@
     "format": "prettier --write \"**/*.+(js|yml|yaml|json)\"",
     "lint": "eslint .",
     "start": "node src/index.js",
-    "knex": "knex",
-    "test": "jest --forceExit "
+    "knex": "knex"
   },
   "devDependencies": {
     "eslint": "5.16.0",
