@@ -6,7 +6,8 @@ printf '\nb2>>>>>>>>>>>>>>'
 
 git stash
 git checkout main || exit
-git merge 'origin/dev' || exit
+
+echo $lav
 git stash pop
 
 printf '3>>>>>>>>>\n'
