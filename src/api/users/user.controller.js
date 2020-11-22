@@ -1,6 +1,8 @@
 'use strict';
 
 const User = require('chatdb-picsart-hw').User;
+
+console.log('Deanny Dav23');
 exports.getOne = async ctx => {
   const query = User.query();
 
