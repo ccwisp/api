@@ -2,8 +2,10 @@ const supertest = require('supertest');
 const app = require('../src/server');
 
 let token;
-const request = supertest.agent(app.listen());
-beforeAll(done => {
+let request;
+
+beforeAll(async done => {
+  request = await supertest.agent(app.listen(), done);
   request
     .post('/api/1/auth/login')
     .send({
