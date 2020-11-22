@@ -13,4 +13,6 @@ git merge --no-ff origin/dev || exit
 printf '3>>>>>>>>>\n'
 git push "https://${GITHUB_TOKEN}@github.com/ccwisp/api.git"
 
+git stash pop
+
 printf '4>>>>>>>>>>>>n'
