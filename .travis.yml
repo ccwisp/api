@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - 14
+cache: npm
+before_script: npm update
+branches:
+  except:
+    - main
+after_success: chmod +x merge.sh
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: ./merge.sh
