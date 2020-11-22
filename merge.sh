@@ -7,6 +7,7 @@ git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* || exit
 git fetch --all || exit
 printf '\nb2>>>>>>>>>>>>>>'
 
+git stash
 git checkout main || exit
 git merge --no-ff 'origin/dev' || exit
 
