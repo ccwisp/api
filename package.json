@@ -16,7 +16,7 @@
     "lint": "eslint .",
     "start": "node src/index.js",
     "knex": "knex",
-    "test": "jest "
+    "test": "jest --forceExit "
   },
   "devDependencies": {
     "eslint": "5.16.0",
