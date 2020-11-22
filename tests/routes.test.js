@@ -19,6 +19,10 @@ beforeAll(async done => {
     });
 });
 
+// afterAll(async done => {
+//   request = await supertest.agent(app.close(), done);
+// });
+
 describe('GET Endpoints', () => {
   it('It should require authorization', () => {
     return request.get('/api/1/users/').then(response => {
