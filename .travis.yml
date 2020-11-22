@@ -7,5 +7,3 @@ branches:
   except:
     - main
 after_success: chmod +x merge.sh && ./merge.sh
-git:
-  clone: false
