@@ -11,8 +11,6 @@ const { isDevelopment } = require('./config');
 
 const server = new Koa();
 
-console.log(process.env.TESTVAR);
-
 const Knex = require('knex');
 const knexConfig = require('chatdb-picsart-hw').knexfile;
 
