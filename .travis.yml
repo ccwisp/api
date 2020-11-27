@@ -15,3 +15,5 @@ deploy:
   target_branch: main
   on:
     branch: dev # Your GitHub repo default branch
+env:
+  TESTVAR: ${TESTVAR}
