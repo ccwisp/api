@@ -1,12 +1,13 @@
-const fd = require('../_fakedata/');
 const fakeUsers = require('../_fakedata/users/user');
+const app = require('../../src/server');
+const supertest = require('supertest');
+const fd = require('../_fakedata/');
 const fs = require('fs-extra');
 const path = require('path');
-const supertest = require('supertest');
-const app = require('../../src/server');
 
 let token;
 let request;
+
 beforeAll(async done => {
   request = await supertest.agent(app.listen(), done);
   await fd.loadUser(fakeUsers.normal);
