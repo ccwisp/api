@@ -1,27 +1,14 @@
 const supertest = require('supertest');
 const app = require('../src/server');
+const fs = require('fs-extra');
+const path = require('path');
 
-let token;
 let request;
 
 beforeAll(async done => {
   request = await supertest.agent(app.listen(), done);
-  request
-    .post('/api/1/auth/login')
-    .send({
-      login: 'david_vardanian',
-      password: 'caladan',
-    })
-    .end((err, response) => {
-      token = response.body.accessToken; // save the token!
-
-      done();
-    });
+  done();
 });
-
-// afterAll(async done => {
-//   request = await supertest.agent(app.close(), done);
-// });
 
 describe('GET Endpoints', () => {
   it('It should require authorization', () => {
@@ -31,6 +18,9 @@ describe('GET Endpoints', () => {
   });
   // send the token - should respond with a 200
   it('It responds with JSON', () => {
+    const token = fs.readJSONSync(
+      path.join(__dirname, './_fakedata/user_tokens.json'),
+    ).PicsartUser;
     return request
       .get('/api/1/users/')
       .set('Authorization', `Bearer ${token}`)

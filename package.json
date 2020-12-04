@@ -16,7 +16,9 @@
     "lint": "eslint .",
     "start": "node src/index.js",
     "knex": "knex",
-    "test": "jest --forceExit "
+    "test": "jest --forceExit ",
+    "test:auth": "jest --forceExit -i tests/auth/login.test.js ",
+    "test:full": "npm run test:auth && npm test"
   },
   "devDependencies": {
     "eslint": "5.16.0",
